@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+}
+
+.solar-system {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.sun {
+    width: 100px;
+    height: 100px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.orbit {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: spin 20s linear infinite;
+    transform-origin: center;
+}
+
+.planet {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ccc;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.mercury {
+    background-color: #c4c4c4;
+    animation: orbit-mercury 20s linear infinite;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.venus {
+    background-color: #f2b847;
+    animation: orbit-venus 25s linear infinite;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.earth {
+    background-color: #2d5c88;
+    animation: orbit-earth 30s linear infinite;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mars {
+    background-color: #ff6600;
+    animation: orbit-mars 35s linear infinite;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Diğer gezegenler için benzer stiller ve animasyonlar ekleyebilirsiniz */
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes orbit-mercury {
+    0% { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+}
+
+@keyframes orbit-venus {
+    0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@keyframes orbit-earth {
+    0% { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+}
+
+@keyframes orbit-mars {
+    0% { transform: rotate(0deg) translateX(260px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(260px) rotate(-360deg); }
+}
